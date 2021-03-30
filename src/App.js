@@ -75,7 +75,7 @@ function App() {
         </Route>
       </Switch>
 
-      <h2>In App component, the count is {count}</h2>
+      <h2>In App component, the total count is {count}</h2>
       <Counter name="Gene" />
       <Counter name="Samurai" />
       <Counter name="Gabumon" />
