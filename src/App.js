@@ -39,9 +39,9 @@ function App() {
   //useSelector kinda has an automatic parameter, state, that it passes in.
   //In state.counter.count, counter is the file name and count is the variable inside the initialState object
   const count = useSelector((state) => state.counter.count);
+  const voters = ["Samurai", "Gene", "Sulivan"];
 
   const history = useHistory();
-  // const [countApp, setCountApp] = React.useState(0);
   let location = useLocation();
   
   function navigateTo(newPath) {
@@ -76,9 +76,9 @@ function App() {
       </Switch>
 
       <h2>In App component, the total count is {count}</h2>
-      <Counter name="Gene" />
-      <Counter name="Samurai" />
-      <Counter name="Gabumon" />
+      {voters.map(voter => (
+        <Counter key={voter} name={voter} />
+      ))}
 
       {/* <TodoList /> */}
         {/* <h1> Company Directory </h1>
